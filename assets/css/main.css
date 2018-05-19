@@ -2557,5 +2557,20 @@
 				#footer .copyright li:first-child {
 					margin-top: 0;
 				}
+	}
 
+
+	
+	/* Image */
+		@media screen and (min-width: 736px) {
+		.size-adjust{
+			width:120px!important;
+			height:120px!important;
+		}
+	}
+		@media screen and (max-width: 736px) {
+		.size-adjust {
+			width: 80px!important;
+			height: 80px!important;
+		}
 	}
