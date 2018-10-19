@@ -26,6 +26,9 @@ PS: Not sure how to get that contact form working? Give formspree.io a try (it's
 
 
 Credits:
+	Theme:
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
 
 	Demo Images:
 		Felicia Simion (ineedchemicalx.deviantart.com)

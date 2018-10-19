@@ -1,6 +1,6 @@
 $( "#hapticserpent" ).on( "click", function() {
     swal({
-        title: 'Sweet!',
+        title: 'Wearable Robotic Haptic Feedback for Virtual Reality',
         text: 'Modal with a custom image.',
         imageUrl: 'https://unsplash.it/400/200',
         imageWidth: 400,
@@ -12,7 +12,7 @@ $( "#hapticserpent" ).on( "click", function() {
 
 $( "#clashtanks" ).on( "click", function() {
     swal({
-        title: 'Sweet!',
+        title: 'Investigation of Virtual and Augmented Reality Gaming Prospects',
         text: 'Modal with a custom image.',
         imageUrl: 'https://unsplash.it/400/200',
         imageWidth: 400,
@@ -24,7 +24,7 @@ $( "#clashtanks" ).on( "click", function() {
 
 $( "#smart-museum-design" ).on( "click", function() {
     swal({
-        title: 'Sweet!',
+        title: 'Indoor Localization using Wi-Fi Routers and Bluetooth Beacons',
         text: 'Modal with a custom image.',
         imageUrl: 'https://unsplash.it/400/200',
         imageWidth: 400,
