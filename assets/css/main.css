@@ -2203,6 +2203,14 @@
 				background-color: #f5fafa;
 			}
 
+			#main > section.five {
+				background-color: #ecf1f1;
+			}
+
+			#main > section.six {
+				background-color: #f5fafa;
+			}
+
 /* Wide */
 
 	@media screen and (min-width: 961px) and (max-width: 1880px) {
@@ -2600,11 +2608,16 @@
 	/* Add border-radius to cards */
 
 	.image-border-radius{
-		border-top-left-radius: 5px;
-		border-top-right-radius: 5px;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+	}
+
+	.image-title-border-radius{
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
 	}
 
 	.title-border-radius{
-		border-bottom-left-radius: 5px;
-		border-bottom-right-radius: 5px;
+		border-radius: 10px;
 	}
+
