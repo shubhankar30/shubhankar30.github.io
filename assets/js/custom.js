@@ -18,18 +18,17 @@ el.innerText = "Click here"
 $( "#open-dictionary" ).on( "click", function() {
     swal({
         title: 'Open Dictionary',
-        text: 'Simplistic, open-source on the go dictionary in the form of a android application.',
         animation: true,
-        html: '<a href="https://github.com/shubhankar30/OpenDictionary">Github Repository Link</a>',
+        html: '<p>Simplistic, open-source on the go dictionary in the form of a android application.</p><a href="https://github.com/shubhankar30/OpenDictionary">Github Repository Link</a>',
       })
 })
 
 $( "#english-marathi-dictionary" ).on( "click", function() {
     swal({
         title: 'English Marathi Dictionary',
-        text: 'An Android Application to find meanings from English to Marathi and vice versa.',
+        text: '',
         animation: true,
-        html: '<a href="https://github.com/shubhankar30/Marathi-English-Dictionary">Github Repository Link</a>',
+        html: '<p>An Android Application to find meanings from English to Marathi and vice versa.</p><a href="https://github.com/shubhankar30/Marathi-English-Dictionary">Github Repository Link</a>',
       })
 })
 
