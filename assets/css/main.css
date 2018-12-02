@@ -1556,7 +1556,7 @@
 		font-size: 19pt;
 		font-weight: 300;
 		line-height: 1.75em;
-		color: #888;
+		color: #000000;
 	}
 
 		body.is-loading * {
@@ -1576,6 +1576,9 @@
 		font-weight: 300;
 		line-height: 1.75em;
 		color: #888;
+	}
+	h4{
+		font-weight: bolder!important;
 	}
 	h3 {
 		font-weight:300;
@@ -1675,7 +1678,7 @@
 	}
 
 	p, ul, ol, dl, table {
-		margin-bottom: 2em;
+		margin-bottom: 0em;
 	}
 
 	br.clear {
@@ -2581,6 +2584,10 @@
 			width:120px!important;
 			height:120px!important;
 		}
+
+		.width-adjust{
+			width:70%;
+		}
 	}
 		@media screen and (max-width: 736px) {
 		.size-adjust {
@@ -2592,7 +2599,9 @@
 		}
 		.width-max{
 			width:100%;
-			
+		}
+		.width-adjust{
+			width:100%;
 		}
 	}
 
@@ -2620,4 +2629,6 @@
 	.title-border-radius{
 		border-radius: 10px;
 	}
+
+
 
