@@ -1,0 +1,116 @@
+[debug] [2018-12-02T14:29:56.957Z] ----------------------------------------------------------------------
+[debug] [2018-12-02T14:29:56.960Z] Command:       E:\Softwares\Nodejs\node.exe C:\Users\Shubhankar Ranade\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2018-12-02T14:29:56.960Z] CLI Version:   6.1.0
+[debug] [2018-12-02T14:29:56.960Z] Platform:      win32
+[debug] [2018-12-02T14:29:56.960Z] Node Version:  v10.13.0
+[debug] [2018-12-02T14:29:56.962Z] Time:          Sun Dec 02 2018 23:29:56 GMT+0900 (Japan Standard Time)
+[debug] [2018-12-02T14:29:56.962Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-12-02T14:29:56.974Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-12-02T14:29:56.974Z] > authorizing via signed-in user
+[debug] [2018-12-02T14:29:56.974Z] [iam] checking project shubhankar30-4e1d5 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2018-12-02T14:29:56.976Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/shubhankar30-4e1d5:testIamPermissions  
+
+[debug] [2018-12-02T14:29:57.838Z] <<< HTTP RESPONSE 200
+[debug] [2018-12-02T14:29:57.840Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/shubhankar30-4e1d5  
+ 
+[debug] [2018-12-02T14:29:58.547Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'shubhankar30-4e1d5'...
+[info] 
+[info] i  deploying hosting
+[debug] [2018-12-02T14:29:58.551Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/shubhankar30-4e1d5/versions  
+
+[debug] [2018-12-02T14:30:00.048Z] <<< HTTP RESPONSE 200
+[info] i  hosting[shubhankar30-4e1d5]: beginning deploy...
+[info] i  hosting[shubhankar30-4e1d5]: found 346 files in public
+[debug] [2018-12-02T14:30:00.166Z] [hosting] hash cache [cHVibGlj] load error: lines is not defined
+[debug] [2018-12-02T14:30:00.470Z] [hosting] hash cache [cHVibGlj] stored for 346 files
+[debug] [2018-12-02T14:30:00.470Z] [hosting][hash queue][FINAL]
+[debug] [2018-12-02T14:30:00.470Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/shubhankar30-4e1d5/versions/3089e927792c2824:populateFiles  
+ <request body omitted>
+[info] i  hosting: adding files to version [0/346] (0%)
+[debug] [2018-12-02T14:30:02.916Z] <<< HTTP RESPONSE 200
+[debug] [2018-12-02T14:30:02.921Z] [hosting][populate queue][FINAL]
+[debug] [2018-12-02T14:30:02.921Z] [hosting] uploads queued: undefined
+[info] i  hosting: uploading new files [NaN/undefined] (NaN%)
+[debug] [2018-12-02T14:30:05.868Z] [hosting][upload] assets/js/custom.js (4778b673b3de0b81fa2a2fe279c2ef5797322e7b91d5391786717d9d027c9342) HTTP ERROR 400 : { 'x-guploader-uploadid':
+   'AEnB2Uokp_p2B-rTyImbM1fVKcUT1rlr8-xPUY3Ii7J4jO_cpxK30_NYQflK3euY_bSb67GP3ajgr6pRSDwVcrUxDCGrXcIl9cUEdOVPIium8QiN---THzw',
+  'content-length': '37',
+  date: 'Sun, 02 Dec 2018 14:30:05 GMT',
+  server: 'UploadServer',
+  'content-type': 'text/html; charset=UTF-8',
+  'alt-svc': 'quic=":443"; ma=2592000; v="44,43,39,35"',
+  connection: 'close' } Couldn't process request (status=400)
+[info] i  hosting: uploading new files [NaN/undefined] (NaN%)
+[debug] [2018-12-02T14:30:06.274Z] [uploadQueue] Retrying task 4778b673b3de0b81fa2a2fe279c2ef5797322e7b91d5391786717d9d027c9342
+[info] i  hosting: uploading new files [NaN/undefined] (NaN%)
+[debug] [2018-12-02T14:30:08.381Z] [hosting][upload] assets/js/custom.js (4778b673b3de0b81fa2a2fe279c2ef5797322e7b91d5391786717d9d027c9342) HTTP ERROR 400 : { 'x-guploader-uploadid':
+   'AEnB2UrZev9SYShfhniRALC8FHCWRidhg69GSLtGZR-thCL4BDkKZ3opEx35Qr768wK-gaW6jBMBBojCX8v47AZucdQ4LQl3SLZyVzGdwZM74m4msih04hA',
+  'content-length': '37',
+  date: 'Sun, 02 Dec 2018 14:30:08 GMT',
+  server: 'UploadServer',
+  'content-type': 'text/html; charset=UTF-8',
+  'alt-svc': 'quic=":443"; ma=2592000; v="44,43,39,35"',
+  connection: 'close' } Couldn't process request (status=400)
+[debug] [2018-12-02T14:30:09.184Z] [uploadQueue] Retrying task 4778b673b3de0b81fa2a2fe279c2ef5797322e7b91d5391786717d9d027c9342
+[info] i  hosting: uploading new files [NaN/undefined] (NaN%)
+[debug] [2018-12-02T14:30:11.179Z] [hosting][upload] assets/js/custom.js (4778b673b3de0b81fa2a2fe279c2ef5797322e7b91d5391786717d9d027c9342) HTTP ERROR 400 : { 'x-guploader-uploadid':
+   'AEnB2UqIekKe5U4dejWyctUgmbunV-_OLYeYX49_H_ddQdY2QKeCbO3WrDRZiapTta2xapqpaKdKGr7m5833InqMcmzgaRUVQBQK4Xvp9YIp0rg_T8auN1M',
+  'content-length': '37',
+  date: 'Sun, 02 Dec 2018 14:30:10 GMT',
+  server: 'UploadServer',
+  'content-type': 'text/html; charset=UTF-8',
+  'alt-svc': 'quic=":443"; ma=2592000; v="44,43,39,35"',
+  connection: 'close' } Couldn't process request (status=400)
+[info] i  hosting: uploading new files [NaN/undefined] (NaN%)
+[debug] [2018-12-02T14:30:12.783Z] [uploadQueue] Retrying task 4778b673b3de0b81fa2a2fe279c2ef5797322e7b91d5391786717d9d027c9342
+[info] i  hosting: uploading new files [NaN/undefined] (NaN%)
+[debug] [2018-12-02T14:30:15.034Z] [hosting][upload] assets/js/custom.js (4778b673b3de0b81fa2a2fe279c2ef5797322e7b91d5391786717d9d027c9342) HTTP ERROR 400 : { 'x-guploader-uploadid':
+   'AEnB2UpWp5N8wdr4JYNdl96uQoIKN1ZlO2WZ0yaxrY1sGwEAIubLlz0QKBwP-Q1RR9iwcDi5NdH59pIb_65TTTql-YAlP8W-5RaO07yKaC-B9_WbOw8MQHY',
+  'content-length': '37',
+  date: 'Sun, 02 Dec 2018 14:30:14 GMT',
+  server: 'UploadServer',
+  'content-type': 'text/html; charset=UTF-8',
+  'alt-svc': 'quic=":443"; ma=2592000; v="44,43,39,35"',
+  connection: 'close' } Couldn't process request (status=400)
+[info] i  hosting: uploading new files [NaN/undefined] (NaN%)
+[info] i  hosting: uploading new files [NaN/undefined] (NaN%)
+[debug] [2018-12-02T14:30:18.235Z] [uploadQueue] Retrying task 4778b673b3de0b81fa2a2fe279c2ef5797322e7b91d5391786717d9d027c9342
+[info] i  hosting: uploading new files [NaN/undefined] (NaN%)
+[debug] [2018-12-02T14:30:20.220Z] [hosting][upload] assets/js/custom.js (4778b673b3de0b81fa2a2fe279c2ef5797322e7b91d5391786717d9d027c9342) HTTP ERROR 400 : { 'x-guploader-uploadid':
+   'AEnB2Up0L0kcMcsKg4b_iC_uoZK_9wtn6QChEZotXxk22SGafgkBIx0UT0imNhSoJW2WTiXOa0-R4PZ3Eh4ZgudkuON--bPvu9zRaVapayuljM-pkDBFQXg',
+  'content-length': '37',
+  date: 'Sun, 02 Dec 2018 14:30:20 GMT',
+  server: 'UploadServer',
+  'content-type': 'text/html; charset=UTF-8',
+  'alt-svc': 'quic=":443"; ma=2592000; v="44,43,39,35"',
+  connection: 'close' } Couldn't process request (status=400)
+[info] i  hosting: uploading new files [NaN/undefined] (NaN%)
+[info] i  hosting: uploading new files [NaN/undefined] (NaN%)
+[info] i  hosting: uploading new files [NaN/undefined] (NaN%)
+[debug] [2018-12-02T14:30:26.621Z] [uploadQueue] Retrying task 4778b673b3de0b81fa2a2fe279c2ef5797322e7b91d5391786717d9d027c9342
+[info] i  hosting: uploading new files [NaN/undefined] (NaN%)
+[debug] [2018-12-02T14:30:28.849Z] [hosting][upload] assets/js/custom.js (4778b673b3de0b81fa2a2fe279c2ef5797322e7b91d5391786717d9d027c9342) HTTP ERROR 400 : { 'x-guploader-uploadid':
+   'AEnB2Uqu5jPJUORuUF2P4NYJMVUeSE2VPrNj6YVfRmttdXN22pAI8OBnyMwOQC_a6HPtQDMEi72JO8WdqX21cGvcsuah6vt4mZ14bdXCbX2sANBsdXUCvRQ',
+  'content-length': '37',
+  date: 'Sun, 02 Dec 2018 14:30:28 GMT',
+  server: 'UploadServer',
+  'content-type': 'text/html; charset=UTF-8',
+  'alt-svc': 'quic=":443"; ma=2592000; v="44,43,39,35"',
+  connection: 'close' } Couldn't process request (status=400)
+[debug] [2018-12-02T14:30:28.849Z] [uploadQueue] Retries exhausted for task 4778b673b3de0b81fa2a2fe279c2ef5797322e7b91d5391786717d9d027c9342:
+[debug] [2018-12-02T14:30:28.849Z] [hosting][upload queue][FINAL]
+[debug] [2018-12-02T14:30:29.121Z] Error: Unexpected error while uploading file.
+    at Request._callback (C:\Users\Shubhankar Ranade\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\hosting\uploader.js:203:39)
+    at Request.self.callback (C:\Users\Shubhankar Ranade\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:182:13)
+    at Request.EventEmitter.emit (domain.js:442:20)
+    at Request.<anonymous> (C:\Users\Shubhankar Ranade\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1161:10)
+    at Request.emit (events.js:182:13)
+    at Request.EventEmitter.emit (domain.js:442:20)
+    at IncomingMessage.<anonymous> (C:\Users\Shubhankar Ranade\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1083:12)
+    at Object.onceWrapper (events.js:273:13)
+    at IncomingMessage.emit (events.js:187:15)
+[error] 
+[error] Error: An unexpected error has occurred.

@@ -26,7 +26,6 @@ $( "#open-dictionary" ).on( "click", function() {
 $( "#english-marathi-dictionary" ).on( "click", function() {
     swal({
         title: 'English Marathi Dictionary',
-        text: '',
         animation: true,
         html: '<p>An Android Application to find meanings from English to Marathi and vice versa.</p><a href="https://github.com/shubhankar30/Marathi-English-Dictionary">Github Repository Link</a>',
       })
