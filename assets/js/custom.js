@@ -30,7 +30,7 @@ $(document).on('click', '#mar-eng-github', function() {
 });
 
 $(document).on('click', '#mar-eng-playstore', function() {
-    location.href = "https://play.google.com/store/apps/details?id=shubhankar30.marengdictionary";
+    location.href = "https://play.google.com/store/apps/details?id=com.shubhankar30.marengdictionary";
     swal.clickConfirm();
 });
 
