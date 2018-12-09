@@ -19,15 +19,23 @@ $( "#open-dictionary" ).on( "click", function() {
     swal({
         title: 'Open Dictionary',
         animation: true,
-        html: '<p>Simplistic, open-source on the go dictionary in the form of a android application.</p><a href="https://github.com/shubhankar30/OpenDictionary">Github Repository Link</a>',
+        imageUrl:'./images/openDict.jpg',
+        imageWidth: 150,
+        imageHeight: 250,
+        imageAlt: 'Open Dictionary',
+        html: '<p>Simplistic, open-source on the go dictionary in the form of a android application.<br></p><a href="https://github.com/shubhankar30/OpenDictionary">Github Repository Link</a> <br></p><a href="https://play.google.com/store/apps/details?id=shubhankar30.opendictionary">Playstore link</a>',
       })
 })
 
 $( "#english-marathi-dictionary" ).on( "click", function() {
     swal({
         title: 'English Marathi Dictionary',
+        imageUrl:'./images/engMarDict.jpg',
+        imageWidth: 150,
+        imageHeight: 250,
+        imageAlt: 'Open Dictionary',
         animation: true,
-        html: '<p>An Android Application to find meanings from English to Marathi and vice versa.</p><a href="https://github.com/shubhankar30/Marathi-English-Dictionary">Github Repository Link</a>',
+        html: '<p>An Android Application to find meanings from English to Marathi and vice versa.<br></p><a href="https://github.com/shubhankar30/Marathi-English-Dictionary">Github Repository Link</a> <br></p><a href="https://play.google.com/store/apps/details?id=com.shubhankar30.marengdictionary">Playstore link</a>',
       })
 })
 
