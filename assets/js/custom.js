@@ -34,6 +34,7 @@ $(document).on('click', '#mar-eng-playstore', function() {
     swal.clickConfirm();
 });
 
+
 $( "#open-dictionary" ).on( "click", function() {
     swal({
         title: 'Open Dictionary',
@@ -42,10 +43,11 @@ $( "#open-dictionary" ).on( "click", function() {
         imageWidth: 150,
         imageHeight: 250,
         imageAlt: 'Open Dictionary',
-        showCancelButton:false,
+        showCancelButton: false,
         showConfirmButton:false,
-        html: '<p>Simplistic, open-source on the go dictionary in the form of a android application.<br><br></p><br>'+
-        '<button style="margin-right:30px" type="button" role="button" tabindex="0" id= "open-dict-github" class="customSwalBtn">' + 'Github Repository' + '</button>'+
+        showCloseButton: true,
+        html: '<p>Simplistic, open-source on the go dictionary in the form of a android application.</p><br>'+
+        '<button type="button" role="button" tabindex="0" id= "open-dict-github" class="customSwalBtn">' + 'Github Repository' + '</button>'+
         '<button type="button" role="button" tabindex="0" id="open-dict-playstore" class="customSwalBtn">' + 'Playstore Link' + '</button>',
       })
 })
@@ -58,11 +60,28 @@ $( "#english-marathi-dictionary" ).on( "click", function() {
         imageHeight: 250,
         imageAlt: 'Open Dictionary',
         animation: true,
-        showCancelButton:false,
+        showCancelButton: false,
         showConfirmButton:false,
-        html: '<p>An Android Application to find meanings from English to Marathi and vice versa.<br></p><br>'+
-        '<button style="margin-right:30px" type="button" role="button" tabindex="0" id= "mar-eng-github" class="customSwalBtn">' + 'Github Repository' + '</button>'+
+        showCloseButton: true,
+        html: '<p>An Android Application to find meanings from English to Marathi and vice versa.</p><br>'+
+        '<button type="button" role="button" tabindex="0" id= "mar-eng-github" class="customSwalBtn">' + 'Github Repository' + '</button>'+
         '<button type="button" role="button" tabindex="0" id="mar-eng-playstore" class="customSwalBtn">' + 'Playstore Link' + '</button>',
-      })
+    })
 })
 
+$( "#ebu" ).on( "click", function() {
+    swal({
+        title: 'English Marathi Dictionary',
+        imageUrl:'./images/engMarDict.jpg',
+        imageWidth: 150,
+        imageHeight: 250,
+        imageAlt: 'EBU',
+        animation: true,
+        showCancelButton: false,
+        showConfirmButton:false,
+        showCloseButton: true,
+        html: '<p>An Android Application to find meanings from English to Marathi and vice versa.</p><br>'+
+        '<button type="button" role="button" tabindex="0" id= "mar-eng-github" class="customSwalBtn">' + 'Github Repository' + '</button>'+
+        '<button type="button" role="button" tabindex="0" id="mar-eng-playstore" class="customSwalBtn">' + 'Playstore Link' + '</button>',
+    })
+})

@@ -1908,7 +1908,7 @@
 		position: relative;
 		display: inline-block;
 		border-radius: 0.35em;
-		color: #fff !important;
+		color: #fff;
 		text-decoration: none;
 		padding: 0.75em 2.5em 0.75em 2.5em;
 		background-color:#458af9;
@@ -2591,6 +2591,18 @@
 		}
 	}
 		@media screen and (max-width: 736px) {
+		.image-resize{
+			width:330px;
+		}
+
+		.image-small-resize{
+			width:330px;
+		}
+
+		.width-resize{
+			widows: 340px;
+		}
+
 		.size-adjust {
 			display:block;
   			margin-left:auto;
@@ -2611,6 +2623,13 @@
 	@media screen and (min-width: 736px) {
 	#size-adjust-header{
 			float: left;
+		}
+
+		.image-resize{
+			width:600px;
+		}
+		.image-small-resize{
+			width:300px;
 		}
 	
 	}
@@ -2645,4 +2664,6 @@
     margin: 30px 5px 0px 5px;
     padding: 10px 32px;
 	}
+
+
 
