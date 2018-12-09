@@ -2631,5 +2631,18 @@
 		border-radius: 10px;
 	}
 
-
+	.customSwalBtn{
+		background-color: rgb(77, 128, 223);
+    border-left-color: rgb(77, 128, 223);
+    border-right-color: rgb(77, 128, 223);
+    border: 0;
+    border-radius: 3px;
+    box-shadow: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 500;
+    margin: 30px 5px 0px 5px;
+    padding: 10px 32px;
+	}
 

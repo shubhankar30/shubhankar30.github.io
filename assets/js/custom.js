@@ -14,6 +14,25 @@ el.innerText = "Click here"
 //         html: '<a href="https://www.researchgate.net/publication/324668531_HapticSerpent_A_Wearable_Haptic_Feedback_Robot_for_VR">Read more</a>',
 //       })
 // })
+$(document).on('click', '#open-dict-github', function() {
+    location.href = "https://github.com/shubhankar30/OpenDictionary";
+    swal.clickConfirm();
+});
+
+$(document).on('click', '#open-dict-playstore', function() {
+    location.href = "https://play.google.com/store/apps/details?id=shubhankar30.opendictionary";
+    swal.clickConfirm();
+});
+
+$(document).on('click', '#mar-eng-github', function() {
+    location.href = "https://github.com/shubhankar30/Marathi-English-Dictionary";
+    swal.clickConfirm();
+});
+
+$(document).on('click', '#mar-eng-playstore', function() {
+    location.href = "https://play.google.com/store/apps/details?id=shubhankar30.marengdictionary";
+    swal.clickConfirm();
+});
 
 $( "#open-dictionary" ).on( "click", function() {
     swal({
@@ -23,7 +42,11 @@ $( "#open-dictionary" ).on( "click", function() {
         imageWidth: 150,
         imageHeight: 250,
         imageAlt: 'Open Dictionary',
-        html: '<p>Simplistic, open-source on the go dictionary in the form of a android application.<br></p><a href="https://github.com/shubhankar30/OpenDictionary">Github Repository Link</a> <br></p><a href="https://play.google.com/store/apps/details?id=shubhankar30.opendictionary">Playstore link</a>',
+        showCancelButton:false,
+        showConfirmButton:false,
+        html: '<p>Simplistic, open-source on the go dictionary in the form of a android application.<br><br></p><br>'+
+        '<button style="margin-right:30px" type="button" role="button" tabindex="0" id= "open-dict-github" class="customSwalBtn">' + 'Github Repository' + '</button>'+
+        '<button type="button" role="button" tabindex="0" id="open-dict-playstore" class="customSwalBtn">' + 'Playstore Link' + '</button>',
       })
 })
 
@@ -35,7 +58,11 @@ $( "#english-marathi-dictionary" ).on( "click", function() {
         imageHeight: 250,
         imageAlt: 'Open Dictionary',
         animation: true,
-        html: '<p>An Android Application to find meanings from English to Marathi and vice versa.<br></p><a href="https://github.com/shubhankar30/Marathi-English-Dictionary">Github Repository Link</a> <br></p><a href="https://play.google.com/store/apps/details?id=com.shubhankar30.marengdictionary">Playstore link</a>',
+        showCancelButton:false,
+        showConfirmButton:false,
+        html: '<p>An Android Application to find meanings from English to Marathi and vice versa.<br></p><br>'+
+        '<button style="margin-right:30px" type="button" role="button" tabindex="0" id= "mar-eng-github" class="customSwalBtn">' + 'Github Repository' + '</button>'+
+        '<button type="button" role="button" tabindex="0" id="mar-eng-playstore" class="customSwalBtn">' + 'Playstore Link' + '</button>',
       })
 })
 
