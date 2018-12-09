@@ -2665,5 +2665,7 @@
     padding: 10px 32px;
 	}
 
-
+	.swal2-modal {
+		background-color: #E1E1E1!important;
+		}
 
