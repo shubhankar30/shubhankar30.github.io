@@ -5,38 +5,6 @@ $(document).ready(function() {
     el.href = ''
     el.innerText = "Click here"
 
-    // $( "#hapticserpent" ).on( "click", function() {
-    //     swal({
-    //         title: 'Wearable Robotic Haptic Feedback for Virtual Reality',
-    //         text: 'Modal with a custom image.',
-    //         /*imageUrl: './images/hapticserpent.png',
-    //         imageWidth: 400,
-    //         imageHeight: 200,
-    //         imageAlt: 'Wearable Robotic Haptic Feedback',*/
-    //         animation: true,
-    //         html: '<a href="https://www.researchgate.net/publication/324668531_HapticSerpent_A_Wearable_Haptic_Feedback_Robot_for_VR">Read more</a>',
-    //       })
-    // })
-    $('#open-dict-github').on('click', function() {
-        location.href = "https://github.com/shubhankar30/OpenDictionary";
-        swal.clickConfirm();
-    });
-
-    $('#open-dict-playstore').on('click', function() {
-        location.href = "https://play.google.com/store/apps/details?id=shubhankar30.opendictionary";
-        swal.clickConfirm();
-    });
-
-    $('#mar-eng-github').on('click', function() {
-        location.href = "https://github.com/shubhankar30/Marathi-English-Dictionary";
-        swal.clickConfirm();
-    });
-
-    $('#mar-eng-playstore').on('click', function() {
-        location.href = "https://play.google.com/store/apps/details?id=com.shubhankar30.marengdictionary";
-        swal.clickConfirm();
-    });
-
     $( "#open-dictionary" ).on( "click", function() {
         swal.fire({
             title: 'Open Dictionary',
@@ -49,15 +17,15 @@ $(document).ready(function() {
             showConfirmButton:false,
             showCloseButton: true,
             html: '<p>Simplistic, open-source on the go dictionary in the form of a android application.</p><br>'+
-            '<button type="button" role="button" tabindex="0" id= "open-dict-github" class="customSwalBtn">' + 'Github Repository' + '</button>'+
-            '<button type="button" role="button" tabindex="0" id="open-dict-playstore" class="customSwalBtn">' + 'Playstore Link' + '</button>',
+            '<a href="https://github.com/shubhankar30/OpenDictionary"><button type="button" role="button" tabindex="0" id= "open-dict-github" class="customSwalBtn">' + 'Github Repository' + '</button></a>'+
+            '<a href-"https://play.google.com/store/apps/details?id=shubhankar30.opendictionary"><button type="button" role="button" tabindex="0" id="open-dict-playstore" class="customSwalBtn">' + 'Playstore Link' + '</button></a>',
         })
     })
 
     $( "#english-marathi-dictionary" ).on( "click", function() {
         swal.fire({
             title: 'English Marathi Dictionary',
-            imageUrl:'./images/engMarDict.jpg',
+            imageUrl:'./images/engMarDict.png',
             imageWidth: 150,
             imageHeight: 250,
             imageAlt: 'Open Dictionary',
@@ -66,15 +34,15 @@ $(document).ready(function() {
             showConfirmButton:false,
             showCloseButton: true,
             html: '<p>An Android Application to find meanings from English to Marathi and vice versa.</p><br>'+
-            '<button type="button" role="button" tabindex="0" id= "mar-eng-github" class="customSwalBtn">' + 'Github Repository' + '</button>'+
-            '<button type="button" role="button" tabindex="0" id="mar-eng-playstore" class="customSwalBtn">' + 'Playstore Link' + '</button>',
+            '<a href="https://github.com/shubhankar30/Marathi-English-Dictionary"><button type="button" role="button" tabindex="0" id= "mar-eng-github" class="customSwalBtn">' + 'Github Repository' + '</button></a>'+
+            '<a href="https://play.google.com/store/apps/details?id=com.shubhankar30.marengdictionary"><button type="button" role="button" tabindex="0" id="mar-eng-playstore" class="customSwalBtn">' + 'Playstore Link' + '</button></a>',
         })
     })
 
     $( "#ebu" ).on( "click", function() {
         swal.fire({
-            title: 'English Marathi Dictionary',
-            imageUrl:'./images/engMarDict.jpg',
+            title: 'EBU',
+            imageUrl:'./images/ebu.png',
             imageWidth: 150,
             imageHeight: 250,
             imageAlt: 'EBU',
@@ -82,9 +50,8 @@ $(document).ready(function() {
             showCancelButton: false,
             showConfirmButton:false,
             showCloseButton: true,
-            html: '<p>An Android Application to find meanings from English to Marathi and vice versa.</p><br>'+
-            '<button type="button" role="button" tabindex="0" id= "mar-eng-github" class="customSwalBtn">' + 'Github Repository' + '</button>'+
-            '<button type="button" role="button" tabindex="0" id="mar-eng-playstore" class="customSwalBtn">' + 'Playstore Link' + '</button>',
+            html: '<p>Electronic Scarecrow Android Application.</p><br>'+
+            '<a href="https://play.google.com/store/apps/details?id=com.shubhankar30.ebuapp"><button type="button" role="button" tabindex="0" id="ebu-playstore" class="customSwalBtn">' + 'Playstore Link' + '</button></a>',
         })
     })
 });
