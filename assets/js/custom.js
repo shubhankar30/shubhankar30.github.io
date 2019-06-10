@@ -39,10 +39,10 @@ $(document).ready(function() {
         })
     })
 
-    $( "#ebu" ).on( "click", function() {
+    $( "#revaly" ).on( "click", function() {
         swal.fire({
-            title: 'EBU',
-            imageUrl:'./images/ebu.png',
+            title: 'Revaly',
+            // imageUrl:'./images/ebu.png',
             imageWidth: 150,
             imageHeight: 250,
             imageAlt: 'EBU',
@@ -50,8 +50,8 @@ $(document).ready(function() {
             showCancelButton: false,
             showConfirmButton:false,
             showCloseButton: true,
-            html: '<p>Electronic Scarecrow Android Application.</p><br>'+
-            '<a href="https://play.google.com/store/apps/details?id=com.shubhankar30.ebuapp"><button type="button" role="button" tabindex="0" id="ebu-playstore" class="customSwalBtn">' + 'Playstore Link' + '</button></a>',
+            html: '<p>Data scraping and analysis.</p><br>'+
+            '<a href="https://stage2-revaly-heroku.herokuapp.com"><button type="button" role="button" tabindex="0" id="revaly-link" class="customSwalBtn">' + 'Project Link' + '</button></a>',
         })
     })
 });

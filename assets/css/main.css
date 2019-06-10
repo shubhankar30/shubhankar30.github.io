@@ -2580,8 +2580,6 @@
 	/* Image */
 		@media screen and (min-width: 736px) {
 		.size-adjust{
-			float: left;
-			margin: 0 2em 2em 0;
 			width:120px!important;
 			height:120px!important;
 		}
@@ -2590,6 +2588,12 @@
 			width:70%;
 		}
 	}
+
+	.center-block{
+		margin:auto;
+		float:none;
+	}
+
 		@media screen and (max-width: 736px) {
 		.image-resize{
 			width:330px;
@@ -2605,8 +2609,6 @@
 
 		.size-adjust {
 			display:block;
-  			margin-left:auto;
- 		    margin-right:auto; 
 			width: 90px!important;
 			height: 90px!important;
 		}
@@ -2621,9 +2623,7 @@
 	/* Heading adjust */
 
 	@media screen and (min-width: 736px) {
-	#size-adjust-header{
-			float: left;
-		}
+
 
 		.image-resize{
 			width:600px;

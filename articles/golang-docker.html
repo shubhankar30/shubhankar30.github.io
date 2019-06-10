@@ -31,6 +31,7 @@
 					<li><a href="../index.html" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Intro</span></a></li>
 					<li><a href="../index.html" id="projects-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Projects</span></a></li>
 					<li><a href="../index.html" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-user">Portfolio</span></a></li>
+					<li><a href="../index.html" id="articles-link" class="skel-layers-ignoreHref"><span class="icon fa-newspaper-o">Articles</span></a></li>
 					<li><a href="../index.html" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Contact</span></a></li>
 				</ul>
 			</nav>
@@ -50,47 +51,41 @@
 
 	<!-- Main -->
 	<div id="main">
-
-
 			<!-- Projects -->
-			<section id="projects" class="two">
+			<section id="golang-docker-article" class="two">
 				<div class="container">
-	
 					<header>
 						<h2>Setting up a Web Server with Docker in Golang</h2>
 					</header>
 	
 					<div class="body width-resize">
-						
-							<button><a href="https://github.com/shubhankar30/Golang_Docker">Github Repository</a></button><br><br>
+					<button><a href="https://github.com/shubhankar30/Golang_Docker">Github Repository</a></button><br><br>
+					<p>
+						To run go code within docker, an exec file needs to be executed.<br><br>
+						The exec file can be created with many ways.<br>
+						During building of docker container<br>
+						Or previously built using go build<br>
+						And then executed within docker container<br>
+						Or the exec file can be passed during runtime<br>
+						In lessontime, main.go is build in docker file, and to execute it, docker compose is used<br><br>
+						docker build -t test .<br><br>
+						(test is image name)<br><br>
+					</p>
 
-
-					<p>.To run go code within docker, an exec file needs to be executed.<br><br>
-
-							The exec file can be created with many ways.<br>
-							
-							During building of docker container<br>
-							
-							Or previously built using go build<br>
-							
-							And then executed within docker container<br>
-							
-							Or the exec file can be passed during runtime<br>
-							
-							In lessontime, main.go is build in docker file, and to execute it, docker compose is used<br><br>
-							
-							docker build -t test .<br><br>
-							
-							(test is image name)<br><br>
-							
+						<pre>
+							<code>
 							Go build main.go ---> Creates main exec file<br>
 							Docker run –it –p 8080:8080 –t test ./main ----> To run the exec file<br>
 							Docker run –it –p 8080:8080 –t test go run go/src/temp/main.go --> run the go file within docker command<br>
-							In this case, no need to add RUN go build go/src/temp/main.go in Dockerfile<br><br>
-							
+							</code>	
+						</pre>
+						In this case, no need to add RUN go build go/src/temp/main.go in Dockerfile<br><br>
+						<pre>
+							<code>
 							Docker build –t test<br>
 							Docker run –it –p 8080:8080 –t test<br>
-						</p>
+							</code>
+						</pre>
 					</div>
 			</div>
 			</section>
@@ -98,13 +93,11 @@
 
 	<!-- Footer -->
 	<div id="footer">
-
 		<!-- Copyright -->
 		<ul class="copyright">
 			<li>&copy; Shubhankar Ranade</li>
 			<li></li>
 		</ul>
-
 	</div>
 
 	<!-- Scripts -->
