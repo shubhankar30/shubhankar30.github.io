@@ -51,6 +51,11 @@ $(document).ready(function() {
             showConfirmButton:false,
             showCloseButton: true,
             html: '<p>Data scraping and analysis.</p><br>'+
+            '<p>Built using Django..</p><br>'+
+            '<p>Dashboard Frontend built with REACT, consumes REST API.</p><br>'+
+            '<p>Sentiment Analysis and Review Scraping done with Python.</p><br>'+
+            '<p>Deployed to Heroku with Continuous Integration.</p><br>'+
+            '<p>Hosted on Github.</p><br>'+
             '<a href="https://stage2-revaly-heroku.herokuapp.com"><button type="button" role="button" tabindex="0" id="revaly-link" class="customSwalBtn">' + 'Project Link' + '</button></a>',
         })
     })
