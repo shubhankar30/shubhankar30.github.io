@@ -2608,7 +2608,7 @@
 		}
 
 		.size-adjust {
-			display:block;
+			display:inline-block;
 			width: 90px!important;
 			height: 90px!important;
 		}
