@@ -28,7 +28,7 @@ $(document).ready(function() {
             imageUrl:'./images/engMarDict.png',
             imageWidth: 150,
             imageHeight: 250,
-            imageAlt: 'Open Dictionary',
+            imageAlt: 'English Marathi Dictionary',
             animation: true,
             showCancelButton: false,
             showConfirmButton:false,
@@ -36,6 +36,38 @@ $(document).ready(function() {
             html: '<p>An Android Application to find meanings from English to Marathi and vice versa.</p><br>'+
             '<a href="https://github.com/shubhankar30/Marathi-English-Dictionary"><button type="button" role="button" tabindex="0" id= "mar-eng-github" class="customSwalBtn">' + 'Github Repository' + '</button></a>'+
             '<a href="https://play.google.com/store/apps/details?id=com.shubhankar30.marengdictionary"><button type="button" role="button" tabindex="0" id="mar-eng-playstore" class="customSwalBtn">' + 'Playstore Link' + '</button></a>',
+        })
+    })
+
+    $( "#ebu" ).on( "click", function() {
+        swal.fire({
+            title: 'EBU (Electronic Scarecrow)',
+            imageUrl:'./images/ebu.png',
+            imageWidth: 150,
+            imageHeight: 250,
+            imageAlt: 'EBU',
+            animation: true,
+            showCancelButton: false,
+            showConfirmButton:false,
+            showCloseButton: true,
+            html: '<p>An Android Application to find meanings from English to Marathi and vice versa.</p><br>'+
+            '<a href="https://play.google.com/store/apps/details?id=com.shubhankar30.ebuapp&hl=en"><button type="button" role="button" tabindex="0" id="mar-eng-playstore" class="customSwalBtn">' + 'Playstore Link' + '</button></a>',
+        })
+    })
+
+    $( "#trapp" ).on( "click", function() {
+        swal.fire({
+            title: 'Complaint Tracking',
+            imageUrl:'./images/trapp.png',
+            imageWidth: 150,
+            imageHeight: 250,
+            imageAlt: 'Complaint Tracking',
+            animation: true,
+            showCancelButton: false,
+            showConfirmButton:false,
+            showCloseButton: true,
+            html: '<p>Complaint Tracking Android Application integrated with Firebase, Firestore and Crashlytics.</p><br>'+
+            '<a href="https://play.google.com/store/apps/details?id=com.futuraapsol.trapp&hl=en"><button type="button" role="button" tabindex="0" id="mar-eng-playstore" class="customSwalBtn">' + 'Playstore Link' + '</button></a>',
         })
     })
 
