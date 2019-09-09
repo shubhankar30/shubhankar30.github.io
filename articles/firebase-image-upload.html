@@ -55,52 +55,89 @@
 			<section id="golang-docker-article" class="two">
 				<div class="container">
 					<header>
-						<h2>Uploading Image to Firebase and its reference to Firestore</h2>
+						<h2>Uploading Image to Firebase and its reference to Firestore in Android</h2>
 					</header>
 	
 					<div class="body">
-					<button><a href="https://github.com/shubhankar30/Golang_Docker">Github Repository</a></button><br><br>
-						- To run go code within docker, an exec file needs to be executed.<br>
-						- The exec file can be created with many ways.<br>
-						1. During building of docker container.<br>
-						2. Previously built using go build and then executed within docker container or passed during runtime.<br>
+						This operation would be used to link a file to any document. (Suppose you want a picture for every document you have). <br>
+						For this, you have to upload image in firebase, get its reference url and save it within the document to make it easier.
+						If you have the document id before the upload operation, you can perform this task with Cloud Functions but in my case, I 
+						needed to create a document after the image was uploaded which is why I couldn't use Cloud functions for this task. <br>
 						<br>
+						As all firebase functions are async in nature, we have to wait for each operation to finish after which we can proceed to the next one.
 						<br>
-						- In this approach, main.go is built in docker file, and to execute it, docker compose is used.<br>
-						
+						The task is simple if it is a single file to be uploaded to Firebase as everything can be done in a single flow.<br>
+						But in case of multiple files, each file needs to be handled in async functions.<br>
+
 						<pre>
-						docker build -t test . <br>
-						(test is image name)
+							final StorageReference imageFolder = FirebaseStorage.getInstance().getReference().child("ImageFolder");<br>
+							db = FirebaseFirestore.getInstance();<br>
+							uploadImageCounter = 0;<br>
+							randomImageName = UUID.randomUUID().toString().substring(0,5);<br>
+							// check if any images are selected<br>
+							if (currentImageSelected > 0) {<br>
+									for (uploadProgressCount = 0; uploadProgressCount < imageList.size(); uploadProgressCount++) {<br>
+											Uri individualImage = imageList.get(uploadProgressCount);<br>
+											imageName = imageFolder.child(randomImageName + uploadProgressCount + individualImage.getLastPathSegment());<br>
+											<br>
+											imageName.putFile(individualImage).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {<br>
+													@Override<br>
+													public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {<br>
+															uploadImageCounter++;<br>
+															imageDownloadUrlCounter = 0;<br>
+
+															if (uploadImageCounter.equals(currentImageSelected)) {<br>
+																<br>
+																	// At this point all images are finished uploading<br>
+																	// So, get download urls of all uploaded images<br>
+																	for (int i = 0; i < imageList.size(); i++) {<br>
+																			Uri individualImage = imageList.get(i);<br>
+																			imageName2 = imageFolder.child(randomImageName + i + individualImage.getLastPathSegment());<br>
+																			imageName2.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {<br>
+																					@Override<br>
+																					public void onSuccess(Uri uri) {<br>
+																							imageDownloadUrlCounter++;<br>
+																							String url = valueOf(uri);<br>
+																							imageUrlList.add(url);<br>
+																							if (imageDownloadUrlCounter.equals(currentImageSelected)) {<br>
+																									// At this point, we have download urls of all images in imageUrlList<br>
+																									complaintData.put("images", imageUrlList);<br>
+																									<br>
+																									// Add complaint data to firestore<br>
+																									db.collection("complaints")<br>
+																													.add(complaintData)<br>
+																													.addOnSuccessListener(new OnSuccessListener<DocumentReference>() {<br>
+																															@Override<br>
+																															public void onSuccess(DocumentReference documentReference) {<br>
+																																	progressDialog.dismiss();<br>
+																																	// Go back after adding complaint<br>
+																																	if (getFragmentManager() != null) {<br>
+																																			getFragmentManager().popBackStackImmediate();<br>
+																																	}<br>
+																															}<br>
+																													})<br>
+																													.addOnFailureListener(new OnFailureListener() {<br>
+																															@Override<br>
+																															public void onFailure(@NonNull Exception e) {<br>
+																																	Log.w(TAG, "Error adding document", e);<br>
+																																	progressDialog.dismiss();<br>
+																																	Toast.makeText(getActivity(), "Some error occured", Toast.LENGTH_SHORT).show();<br>
+																																	if (getFragmentManager() != null) {<br>
+																																			getFragmentManager().popBackStackImmediate();<br>
+																																	}<br>
+																															}<br>
+																													});<br>
+																							}<br>
+																					}<br>
+																			});<br>
+																	}<br>
+															}<br>
+
+
+													}
+											});
+									}
 						</pre>
-
-						
-						Run commands:
-						<pre>
-						- Go build main.go     ---> Creates main exec file.<br>
-						- Docker run –it –p 8080:8080 –t test ./main    ----> To run the exec file.<br>
-						</pre>
-
-						<br>
-						<pre>
-						- Docker run –it –p 8080:8080 –t test go run go/src/temp/main.go   --> run the go file within docker command.<br>
-						In this case, no need to add RUN go build go/src/temp/main.go in Dockerfile.
-						</pre>
-
-						<br>
-						<pre>
-						- Docker build –t test <br>
-						- Docker run –it –p 8080:8080 –t test 
-						</pre>
-
-						<br>
-						<pre>
-						docker-compose up -d --build
-						</pre>
-
-						
-						 
-
-
 
 					</div>
 			</div>
