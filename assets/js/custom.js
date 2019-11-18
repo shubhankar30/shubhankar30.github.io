@@ -71,10 +71,9 @@ $(document).ready(function() {
         })
     })
 
-    $( "#revaly" ).on( "click", function() {
+    $( "#lifeInWeeks" ).on( "click", function() {
         swal.fire({
-            title: 'Revaly',
-            // imageUrl:'./images/ebu.png',
+            title: 'Life In Weeks',
             imageWidth: 150,
             imageHeight: 250,
             imageAlt: 'EBU',
@@ -82,13 +81,10 @@ $(document).ready(function() {
             showCancelButton: false,
             showConfirmButton:false,
             showCloseButton: true,
-            html: '<p>Data scraping and analysis.</p><br>'+
-            '<p>Built using Django..</p><br>'+
-            '<p>Dashboard Frontend built with REACT, consumes REST API.</p><br>'+
-            '<p>Sentiment Analysis and Review Scraping done with Python.</p><br>'+
-            '<p>Deployed to Heroku with Continuous Integration.</p><br>'+
+            html: '<p>Visualise your life in blocks of weeks.</p><br>'+
+            '<p>Get a different perspective on life.</p><br>'+
             '<p>Hosted on Github.</p><br>'+
-            '<a href="https://stage2-revaly-heroku.herokuapp.com"><button type="button" role="button" tabindex="0" id="revaly-link" class="customSwalBtn">' + 'Project Link' + '</button></a>',
+            '<a href="https://shubhankar30.github.io/lifeInWeeks/"><button type="button" role="button" tabindex="0" id="lifeInWeeks-link" class="customSwalBtn">' + 'Link' + '</button></a>',
         })
     })
 });
