@@ -76,14 +76,14 @@
 						
 						Run commands:
 						<pre>
-						- Go build main.go     ---> Creates main exec file.<br>
-						- Docker run –it –p 8080:8080 –t test ./main    ----> To run the exec file.<br>
+						- Go build main.go     // Creates main exec file.<br>
+						- Docker run –it –p 8080:8080 –t test ./main   // To run the exec file.<br>
 						</pre>
 
 						<br>
 						<pre>
-						- Docker run –it –p 8080:8080 –t test go run go/src/temp/main.go   --> run the go file within docker command.<br>
-						In this case, no need to add RUN go build go/src/temp/main.go in Dockerfile.
+						- Docker run –it –p 8080:8080 –t test go run go/src/temp/main.go   // run the go file within docker command.<br>
+						// In this case, no need to add RUN go build go/src/temp/main.go in Dockerfile.
 						</pre>
 
 						<br>
@@ -96,12 +96,6 @@
 						<pre>
 						docker-compose up -d --build
 						</pre>
-
-						
-						 
-
-
-
 					</div>
 			</div>
 			</section>

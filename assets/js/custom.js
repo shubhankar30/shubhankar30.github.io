@@ -58,7 +58,7 @@ $(document).ready(function() {
     $( "#trapp" ).on( "click", function() {
         swal.fire({
             title: 'Complaint Tracking',
-            imageUrl:'./images/trapp.png',
+            imageUrl:'./images/trapp.jpg',
             imageWidth: 150,
             imageHeight: 250,
             imageAlt: 'Complaint Tracking',
