@@ -55,6 +55,23 @@ $(document).ready(function() {
         })
     })
 
+    $( "#ahapte-vet" ).on( "click", function() {
+        swal.fire({
+            title: 'Vet Clinic Management',
+            animation: true,
+            imageUrl:'./images/ahapte-vet.jpg',
+            imageWidth: 450,
+            imageHeight: 250,
+            imageAlt: 'Vet DB Mgmt',
+            showCancelButton: false,
+            showConfirmButton:false,
+            showCloseButton: true,
+            html: '<p>- Simple, easy-to-use database management application</p><br>'+
+            '<p>- Keep track of clients and their reports</p>'+
+            '<p>- Ability to send email, sms to multiple clients.</p>'
+        })
+    })
+
     $( "#trapp" ).on( "click", function() {
         swal.fire({
             title: 'Complaint Tracking',
