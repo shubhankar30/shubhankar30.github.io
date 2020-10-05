@@ -55,38 +55,6 @@ $(document).ready(function() {
         })
     })
 
-    $( "#ahapte-vet" ).on( "click", function() {
-        swal.fire({
-            title: 'Vet Clinic Management',
-            animation: true,
-            imageUrl:'./images/ahapte-vet.jpg',
-            imageWidth: 450,
-            imageHeight: 250,
-            imageAlt: 'Vet DB Mgmt',
-            showCancelButton: false,
-            showConfirmButton:false,
-            showCloseButton: true,
-            html: '<p>- Simple, easy-to-use database management application</p><br>'+
-            '<p>- Keep track of clients and their reports</p>'+
-            '<p>- Ability to send email, sms to multiple clients.</p>'
-        })
-    })
-
-    $( "#trapp" ).on( "click", function() {
-        swal.fire({
-            title: 'Complaint Tracking',
-            imageUrl:'./images/trapp.jpg',
-            imageWidth: 150,
-            imageHeight: 250,
-            imageAlt: 'Complaint Tracking',
-            animation: true,
-            showCancelButton: false,
-            showConfirmButton:false,
-            showCloseButton: true,
-            html: '<p>Complaint Tracking Android Application integrated with Firebase, Firestore and Crashlytics.</p><br>'+
-            '<a href="https://play.google.com/store/apps/details?id=com.futuraapsol.trapp&hl=en"><button type="button" role="button" tabindex="0" id="mar-eng-playstore" class="customSwalBtn">' + 'Playstore Link' + '</button></a>',
-        })
-    })
 
     $( "#lifeInWeeks" ).on( "click", function() {
         swal.fire({
